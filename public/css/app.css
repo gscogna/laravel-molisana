@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: #002d75;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+header a {
+  padding: 10px;
+}
+
+header a:hover {
+  background-color: #b3e5fc;
+}
+
+.sfondo {
+  height: 600px;
+  background-image: url(/images/molisana-home.jpg?cb7db241726fb646d7e1c8553429c07c);
+  background-size: cover;
+  margin: 10px 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container .card {
+  width: calc(100% / 3 );
+  padding: 10px;
+  position: relative;
+}
+
+.card-container .card img {
+  max-width: 100%;
+  position: relative;
+}
+
+.card-container .card .overlay {
+  display: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.card-container .card:hover .overlay {
+  display: block;
+}
+
+footer img {
+  max-width: 100%;
+}
+

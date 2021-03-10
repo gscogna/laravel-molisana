@@ -1,0 +1,33 @@
+// Riferito alla home
+.sfondo{
+    height: 600px;
+    background-image: url(../../img/molisana-home.jpg);
+    background-size: cover;
+    margin:10px 0;
+}
+
+// riferito ai prodotti
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    .card{
+        width: calc(100% / 3 );
+        padding:10px;
+        position: relative;
+        img{
+            max-width: 100%;
+            position: relative;
+        }
+        .overlay{
+            display: none;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;;
+        }
+        &:hover .overlay{
+            display: block;
+
+        }
+    }
+}

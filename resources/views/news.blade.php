@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('title')
-sezione newsciao
+sezione news
 @endsection
 
 @section('content')

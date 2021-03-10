@@ -1,0 +1,9 @@
+header{
+    text-align: center;
+    a{
+        padding:10px;
+        &:hover{
+            background-color: $link-background;
+        }
+    }
+}   

@@ -6,5 +6,7 @@
 
 
 @section('content')
-    <p>okok</p>
+
+<div class="sfondo"></div>
+
 @endsection
