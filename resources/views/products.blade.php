@@ -4,16 +4,20 @@
 
 @section('content')
 <div class="container">
-    <div class="card-container">
-        @foreach ($paste as $key => $pasta)
-            <div class="card">
-                <img src=" {{ $pasta ['src'] }} " alt="{{ $pasta ['titolo'] }}">
-                <div class="overlay">
-                    <a href=" {{ route('pagina-dettagli', ['id' => $key'] ) }} "> {{ $pasta['titolo'] }} </a>
+    @foreach ($paste as $index => $pasta)
+        <h2> {{ $index }} </h2>
+        <div class="card-container">
+            @foreach ($pasta as $key => $item)
+                <div class="card">
+                    <img src=" {{ $item ['src'] }} " alt="{{ $item ['titolo'] }}">
+                    <div class="overlay">
+                        <a href=" {{ route('pagina-dettagli', ['id' => $key] ) }} "> {{ $item['titolo'] }} </a>
+                    </div>
                 </div>
-            </div>
-        @endforeach
-    </div>
+            @endforeach
+
+        </div>
+    @endforeach
 </div>
 
 @endsection
