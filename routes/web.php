@@ -47,13 +47,17 @@ Route::get('/products', function () {
 
 Route::get('/dettaglio/{id}', function ($id) {
     $pasta = config('pasta');
+    if(is_numeric($id) >= 0 && $id <count($pasta)){
+        $prodotto = $pasta[$id];
 
-    $prodotto = $pasta[$id];
+        $data = [
+            'formato' => $prodotto
+        ];
+        return view('dettagli', $data);
+    }else{
+        abort('404');
+    }
 
-    $data =[
-        'formato' => $prodotto
-    ];
-    return view('dettagli',$data);
 })->name('pagina-dettagli');
 
 
