@@ -20,10 +20,15 @@ Route::get('/', function () {
 
 Route::get('/products', function () {
     $pasta = config('pasta');
+    $collection =collect($pasta);
+    // $pasta_lunga = $collection ->where('tipo','lunga');
+    // $pasta_corta = $collection ->where('tipo','corta');
+    // $pasta_cortissima = $collection ->where('tipo','cortissima');
 
     $pasta_lunga = array_filter($pasta, function ($elemento) {
         return $elemento ['tipo'] == 'lunga';
     });
+    
 
     $pasta_corta = array_filter($pasta, function ($elemento) {
         return $elemento['tipo'] == 'corta';
@@ -43,7 +48,7 @@ Route::get('/products', function () {
 
 
     return view('products',$data);
-});
+})-> name('pagina-prodotti');
 
 Route::get('/dettaglio/{id}', function ($id) {
     $pasta = config('pasta');
